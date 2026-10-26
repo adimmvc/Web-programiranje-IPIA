@@ -1,0 +1,450 @@
+
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studentski CV - IT i RPA Development</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f1f5f9;
+            color: #263445;
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, #17365d, #2878b5);
+            color: white;
+            padding: 45px 7%;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 18px;
+            margin: 10px 0 0;
+        }
+
+        main {
+            width: 100%;
+            padding: 30px 5%;
+        }
+
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        h2 {
+            color: #205b8f;
+            border-bottom: 2px solid #dce8f2;
+            padding-bottom: 10px;
+            margin-top: 0;
+        }
+
+        .info {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .info div {
+            background-color: #eef5fb;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .info strong {
+            display: block;
+            color: #205b8f;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skills span {
+            background-color: #e1effa;
+            color: #174d78;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #d5dee7;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #205b8f;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f6fa;
+        }
+
+        td:last-child, th:last-child {
+            text-align: center;
+            width: 100px;
+        }
+
+        tr:hover {
+            background-color: #e5f1fb;
+        }
+
+        .grade {
+            font-weight: bold;
+            color: #205b8f;
+        }
+
+        .practice {
+            border-left: 5px solid #2878b5;
+            padding-left: 18px;
+        }
+
+        .highlight {
+            background-color: #eaf5ff;
+            border-radius: 8px;
+            padding: 18px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #17365d;
+            color: white;
+        }
+
+        @media (max-width: 700px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            main {
+                padding: 20px 12px;
+            }
+
+            section {
+                padding: 16px;
+                overflow-x: auto;
+            }
+
+            .info {
+                grid-template-columns: 1fr;
+            }
+
+            table {
+                min-width: 500px;
+            }
+        }
+
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            section {
+                box-shadow: none;
+                border: 1px solid #ddd;
+                break-inside: avoid;
+            }
+
+            header, footer {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Adi Imamović</h1>
+    <p>Student informacionih tehnologija | RPA Development</p>
+    <p>Student usmjeren na automatizaciju poslovnih procesa i razvoj softverskih rješenja</p>
+</header>
+
+<main>
+
+    <section>
+        <h2>O meni</h2>
+
+        <p>
+            Student sam usmjeren na informacione tehnologije, razvoj softverskih
+            rješenja i automatizaciju poslovnih procesa. Tokom studija stekao sam
+            znanja iz programiranja, baza podataka, računarskih mreža, informacionih
+            sistema i poslovanja. Posebno me interesuje Robotic Process Automation
+            (RPA), odnosno primjena tehnologije za automatizaciju ponavljajućih
+            poslovnih zadataka.
+        </p>
+
+        <p>
+            Posjedujem bogato iskustvo u radu s alatom Microsoft Power Automate,
+            posebno u kreiranju automatizovanih tokova rada i unapređenju
+            efikasnosti poslovnih procesa. Kroz stručnu praksu u IT firmi imao sam
+            priliku upoznati se s praktičnom primjenom RPA tehnologija i njihovim
+            značajem u savremenom poslovanju.
+        </p>
+    </section>
+
+    <section>
+        <h2>Osnovne informacije</h2>
+
+        <div class="info">
+            <div>
+                <strong>Obrazovanje</strong>
+                Student informacionih tehnologija
+            </div>
+
+            <div>
+                <strong>Položeni ispiti</strong>
+                20 ispita
+            </div>
+
+            <div>
+                <strong>Stručna praksa</strong>
+                IT firma – RPA Development
+            </div>
+
+            <div>
+                <strong>Glavna specijalizacija</strong>
+                Automatizacija poslovnih procesa
+            </div>
+
+            <div>
+                <strong>Ključni alat</strong>
+                Microsoft Power Automate
+            </div>
+
+            <div>
+                <strong>Profesionalni cilj</strong>
+                Razvoj karijere u IT sektoru
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Stručna praksa – RPA Development</h2>
+
+        <div class="practice">
+            <h3>Praksa u IT firmi</h3>
+            <p>
+                Tokom stručne prakse radio sam u oblasti RPA developmenta,
+                koja podrazumijeva razvoj i implementaciju softverskih robota
+                za automatizaciju ponavljajućih poslovnih aktivnosti.
+            </p>
+
+            <p><strong>Oblasti rada i stečena znanja:</strong></p>
+
+            <ul>
+                <li>Izrada automatizovanih tokova rada pomoću alata Microsoft Power Automate.</li>
+                <li>Automatizacija ponavljajućih administrativnih i poslovnih zadataka.</li>
+                <li>Upoznavanje s procesima automatizacije i optimizacije radnih tokova.</li>
+                <li>Logičko modeliranje procesa i definisanje koraka automatizacije.</li>
+                <li>Prepoznavanje mogućnosti za smanjenje ručnog rada i broja grešaka.</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <strong>Ključna kompetencija:</strong>
+            Bogato iskustvo u radu s Microsoft Power Automateom i razumijevanje
+            njegove primjene u automatizaciji poslovnih procesa.
+        </div>
+    </section>
+
+    <section>
+        <h2>Tehničke i profesionalne vještine</h2>
+
+        <div class="skills">
+            <span>Microsoft Power Automate</span>
+            <span>RPA Development</span>
+            <span>Osnove programiranja</span>
+            <span>Objektno programiranje</span>
+            <span>Baze podataka</span>
+            <span>Računarske mreže</span>
+            <span>Operativni sistemi</span>
+            <span>Informacioni sistemi</span>
+            <span>Analitičko razmišljanje</span>
+            <span>Rješavanje problema</span>
+            <span>Poslovna komunikacija</span>
+            <span>Prezentacijske vještine</span>
+        </div>
+    </section>
+
+    <section>
+        <h2>Akademski uspjeh – položenih 20 ispita</h2>
+
+        <p>
+            U nastavku je prikazan pregled položenih predmeta i ostvarenih ocjena
+            prema dostavljenim podacima.
+        </p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>R. br.</th>
+                    <th>Naziv predmeta</th>
+                    <th>Ocjena</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Osnove ekonomije</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Osnove komunikologije</td>
+                    <td class="grade">10</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Uvod u računarstvo i informacione tehnologije</td>
+                    <td class="grade">8</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Osnove programiranja</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Matematika</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Strukture podataka i algoritmi</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Operativni sistemi</td>
+                    <td class="grade">7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Poslovni engleski jezik</td>
+                    <td class="grade">9</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>Uvod u informacione sisteme</td>
+                    <td class="grade">10</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>Menadžment</td>
+                    <td class="grade">8</td>
+                </tr>
+                <tr>
+                    <td>11</td>
+                    <td>Razvoj i izgradnja informacionih sistema</td>
+                    <td class="grade">8</td>
+                </tr>
+                <tr>
+                    <td>12</td>
+                    <td>Računarske mreže</td>
+                    <td class="grade">8</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Statistika i istraživačke metode</td>
+                    <td class="grade">7</td>
+                </tr>
+                <tr>
+                    <td>14</td>
+                    <td>Programski jezici i programiranje</td>
+                    <td class="grade">9</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>Prezentacijske tehnike</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>16</td>
+                    <td>Baze podataka</td>
+                    <td class="grade">7</td>
+                </tr>
+                <tr>
+                    <td>17</td>
+                    <td>Tehnike javnog nastupa</td>
+                    <td class="grade">7</td>
+                </tr>
+                <tr>
+                    <td>18</td>
+                    <td>Objektno programiranje</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>19</td>
+                    <td>Bankarsko poslovanje</td>
+                    <td class="grade">6</td>
+                </tr>
+                <tr>
+                    <td>20</td>
+                    <td>Elektronsko poslovanje</td>
+                    <td class="grade">8</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h2>Profesionalni ciljevi</h2>
+
+        <p>
+            Moj cilj je daljnje usavršavanje u oblasti razvoja softvera i
+            automatizacije poslovnih procesa, s posebnim fokusom na RPA
+            tehnologije i Microsoft Power Platform. Želim primjenjivati
+            stečena akademska i praktična znanja u stvarnim projektima,
+            učestvovati u digitalnoj transformaciji poslovanja i razvijati
+            rješenja koja povećavaju produktivnost i pouzdanost poslovnih procesa.
+        </p>
+    </section>
+
+    <section>
+        <h2>Kontakt</h2>
+
+        <p><strong>E-mail:</strong> imamovicadi65@gmail.com </p>
+        <p><strong>Telefon:</strong> +387 62 979 400 </p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Studentski CV | Informacione tehnologije i RPA Development</p>
+</footer>
+
+</body>
+</html>
