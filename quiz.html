@@ -1,0 +1,292 @@
+
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini kviz - HTML i CSS</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 30px 15px;
+            color: #333;
+        }
+
+        .quiz-container {
+            max-width: 700px;
+            margin: auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2457a7;
+        }
+
+        .description {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .question {
+            background-color: #f8f9fa;
+            padding: 18px;
+            margin-bottom: 18px;
+            border-radius: 8px;
+            border-left: 4px solid #2457a7;
+        }
+
+        .question p {
+            font-weight: bold;
+            margin-top: 0;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            cursor: pointer;
+        }
+
+        input {
+            margin-right: 8px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            background-color: #2457a7;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #183e7a;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        .correct {
+            color: green;
+        }
+
+        .incorrect {
+            color: #c62828;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="quiz-container">
+        <h1>Mini kviz: HTML i CSS</h1>
+
+        <p class="description">
+            Odgovori na svih 5 pitanja i provjeri svoje znanje.
+        </p>
+
+        <form id="quizForm">
+
+            <!-- Pitanje 1 -->
+            <div class="question">
+                <p>1. Šta znači HTML?</p>
+
+                <label>
+                    <input type="radio" name="q1" value="a">
+                    HyperText Markup Language
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="b">
+                    HighText Machine Language
+                </label>
+
+                <label>
+                    <input type="radio" name="q1" value="c">
+                    Hyper Transfer Main Link
+                </label>
+            </div>
+
+            <!-- Pitanje 2 -->
+            <div class="question">
+                <p>2. Koji HTML tag se koristi za najveći naslov?</p>
+
+                <label>
+                    <input type="radio" name="q2" value="a">
+                    &lt;h6&gt;
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="b">
+                    &lt;h1&gt;
+                </label>
+
+                <label>
+                    <input type="radio" name="q2" value="c">
+                    &lt;title&gt;
+                </label>
+            </div>
+
+            <!-- Pitanje 3 -->
+            <div class="question">
+                <p>3. Koje tehnologije se koriste za izradu web stranica?</p>
+                <small>Označi sve tačne odgovore.</small>
+
+                <label>
+                    <input type="checkbox" name="q3" value="html">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="checkbox" name="q3" value="css">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="q3" value="js">
+                    JavaScript
+                </label>
+
+                <label>
+                    <input type="checkbox" name="q3" value="word">
+                    Microsoft Word
+                </label>
+            </div>
+
+            <!-- Pitanje 4 -->
+            <div class="question">
+                <p>4. Koja je osnovna uloga CSS-a?</p>
+
+                <label>
+                    <input type="radio" name="q4" value="a">
+                    Čuvanje podataka u bazi
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="b">
+                    Uređivanje izgleda web stranice
+                </label>
+
+                <label>
+                    <input type="radio" name="q4" value="c">
+                    Pisanje tekstualnih dokumenata
+                </label>
+            </div>
+
+            <!-- Pitanje 5 -->
+            <div class="question">
+                <p>5. Koji HTML tag se koristi za pravljenje linka?</p>
+
+                <label>
+                    <input type="radio" name="q5" value="a">
+                    &lt;img&gt;
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="b">
+                    &lt;p&gt;
+                </label>
+
+                <label>
+                    <input type="radio" name="q5" value="c">
+                    &lt;a&gt;
+                </label>
+            </div>
+
+            <button type="button" onclick="checkAnswers()">
+                Provjeri odgovore
+            </button>
+
+            <button type="reset" onclick="resetQuiz()">
+                Pokušaj ponovo
+            </button>
+
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function checkAnswers() {
+            let score = 0;
+            let totalQuestions = 5;
+
+            // Tačni odgovori za pitanja sa radio buttonima
+            const correctAnswers = {
+                q1: "a",
+                q2: "b",
+                q4: "b",
+                q5: "c"
+            };
+
+            // Provjera pitanja 1, 2, 4 i 5
+            for (let question in correctAnswers) {
+                const selectedAnswer = document.querySelector(
+                    'input[name="' + question + '"]:checked'
+                );
+
+                if (
+                    selectedAnswer &&
+                    selectedAnswer.value === correctAnswers[question]
+                ) {
+                    score++;
+                }
+            }
+
+            // Provjera pitanja 3 sa checkboxovima
+            const selectedCheckboxes = Array.from(
+                document.querySelectorAll('input[name="q3"]:checked')
+            ).map(function (checkbox) {
+                return checkbox.value;
+            });
+
+            const correctCheckboxes = ["html", "css", "js"];
+
+            const allCorrect =
+                selectedCheckboxes.length === correctCheckboxes.length &&
+                correctCheckboxes.every(function (answer) {
+                    return selectedCheckboxes.includes(answer);
+                });
+
+            if (allCorrect) {
+                score++;
+            }
+
+            // Prikaz rezultata
+            const result = document.getElementById("result");
+            const percentage = (score / totalQuestions) * 100;
+
+            result.textContent =
+                "Tvoj rezultat: " + score + " od " +
+                totalQuestions + " (" + percentage + "%)";
+
+            if (score >= 4) {
+                result.className = "correct";
+            } else {
+                result.className = "incorrect";
+            }
+        }
+
+        function resetQuiz() {
+            document.getElementById("result").textContent = "";
+            document.getElementById("result").className = "";
+        }
+    </script>
+
+</body>
+</html>
